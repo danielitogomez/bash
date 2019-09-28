@@ -1,6 +1,6 @@
 #!/bin/bash
-
-#bash script for install python3
+#This script must be executed as root
+#bash script for install python3.6
 
 yum update -y
 yum groupinstall -y "development tools"
@@ -33,3 +33,5 @@ tar xf Python-3.6.4.tar.xz
 cd Python-3.6.4
 ./configure --enable-optimizations
 make altinstall
+
+python3.6 --version
