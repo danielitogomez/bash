@@ -85,3 +85,9 @@ else
     echo "Can't full update kubelet"
     exit 1
 fi
+
+echo "========Present Versions========="
+kubectl version --short
+kubeadm version
+kubelet --version
+echo "================================="
