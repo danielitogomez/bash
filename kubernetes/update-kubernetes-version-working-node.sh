@@ -25,4 +25,7 @@ done
 
 
 sudo apt-mark hold kubectl && sudo apt install -y "kubelet=$update" && sudo apt-mark hold kubelet
+
+#Check Version
+echo "Kubelet Version: "
 kubelet --version

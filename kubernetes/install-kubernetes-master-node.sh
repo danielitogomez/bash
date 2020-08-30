@@ -1,5 +1,5 @@
 #!/bin/bash
-#Only on Master Node
+#Master Node
 
 #Install packages
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
