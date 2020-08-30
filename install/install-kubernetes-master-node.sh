@@ -8,7 +8,7 @@ $(lsb_release -cs) \
 stable"
 sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 cat << EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
-eb https://apt.kubernetes.io/ kubernetes-xenial main
+deb https://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 
 # Install Docker and kube{let,ctl,adm} version 1.17.8
