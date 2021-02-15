@@ -15,3 +15,5 @@ EOF
 sudo apt-get update -y && sudo apt-get install -y docker-ce=5:19.03.12~3-0~ubuntu-bionic kubelet=1.17.8-00 kubeadm=1.17.8-00 kubectl=1.17.8-00 && sudo apt-mark hold docker-ce kubelet kubeadm kubectl
 
 #sudo kubeadm join [your unique string from the kubeadm init command] this command is for Join the worker nodes to the cluster
+#ex of output
+#sudo kubeadm join [ip cluster]:[port] --token [token] --discovery-token-ca-cert-hash [hash] --ignore-preflight-errors
