@@ -2,7 +2,7 @@
 Using bash script we can apply logic for convert CIDR to Netmask and using Docker we can run this script into a container.
 
 ## Requirements
-To have docker installed on your computer.
+To have docker and git installed on your computer.
 
 ## How to use?
 * Using bash script
