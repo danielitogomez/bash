@@ -9,14 +9,14 @@ To have docker and git installed on your computer.
 ```
 $ git clone https://github.com/danielitogomez/bash.git
 $ cd $PWD/bash/netadmin-tools/CIDR2netmask
-$ sh -x CIDR-to-netmask.sh {IP/CIDR}
+$ ./CIDR-to-netmask.sh {IP/CIDR}
 ```
 
 * Using Docker
 ```
 $ git clone https://github.com/danielitogomez/bash.git
 $ cd $PWD/bash/netadmin-tools/CIDR2netmask
-$ sh -x docker_buid_run.sh {IP/CIDR}
+$ ./docker_buid_run.sh {IP/CIDR}
 ```
 
 * Using Docker && Make
@@ -30,5 +30,7 @@ $ make all arg1=IP/CIDR
 ```
 $ git clone https://github.com/danielitogomez/bash.git
 $ cd $PWD/bash/netadmin-tools/CIDR2netmask
-$ sh -x CIDR-to-netmask.sh 192.168.100.10/24
+$ ./docker_buid_run.sh 192.168.100.3/24
 ```
+
+![](example.gif)
