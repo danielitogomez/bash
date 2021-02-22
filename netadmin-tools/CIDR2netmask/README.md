@@ -30,7 +30,7 @@ $ make all arg1=IP/CIDR
 ```
 $ git clone https://github.com/danielitogomez/bash.git
 $ cd $PWD/bash/netadmin-tools/CIDR2netmask
-$ ./CIDR-to-netmask.sh 192.168.100.10/24
+$ ./docker_buid_run.sh 192.168.100.3/24
 ```
 
 ![](example.gif)
