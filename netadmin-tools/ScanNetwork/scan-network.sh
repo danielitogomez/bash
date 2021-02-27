@@ -1,41 +1,44 @@
 #!/bin/bash
 
-echo "======================"
-echo "Starting Ping Sweep..."
-echo "======================"
+#Variables
+
+list="
+192.168.1.130
+wwww.github.com
+www.stackoverflow.com
+www.youtube.com    
+"
+
+#Functions
 
 function pingsweep() {
 
 target=$1
-
 host_reachable="/tmp/reachable"
 
 if [ ! -f "$host_reachable" ]; then
-    touch $host_reachable
+    touch $host_reachable || echo "Failed to create file $host_reachable"
 fi
-    
+
 ping -c1 $target >/dev/null 2>&1 && echo $target is reachable && echo $target is reachable >> $host_reachable || echo $target is down
 
 }
 
-list="list.txt"
+echo "======================"
+echo "Starting Ping Sweep..."
+echo "======================"
 
-if [ ! -f "$list" ]; then
-    touch $list
-fi
+#Ping Sweep call funtion loop
 
-for i in $(cat $list); do
-    pingsweep $i
+for host in $list; do
+    pingsweep $host
 done
 
 echo "======================"
 echo "Ping Sweep completed."
 echo "======================"
-
-echo "......................"
-
 echo "======================"
-echo "List of host reachable"
+echo "List of reachable host"
 echo "======================"
 
 host_reachable=$(cat /tmp/reachable | awk '{print $1}')
@@ -46,8 +49,10 @@ echo "========================"
 echo "Starting Network Scan..."
 echo "========================"
 
-for z in $host_reachable; do
-    nmap $z
+#Nmap Scan loop
+
+for scan in $host_reachable; do
+    nmap $scan
 done
 
 rm -f /tmp/reachable
