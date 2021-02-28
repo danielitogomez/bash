@@ -3,13 +3,13 @@
 #Variables
 
 list="
-192.168.1.130
-wwww.github.com
+www.lala.com
+www.github.com
 www.stackoverflow.com
 www.youtube.com    
 "
 
-#Functions
+#Ping sweep Function
 
 function pingsweep() {
 
