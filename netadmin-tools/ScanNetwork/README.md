@@ -12,7 +12,7 @@ $ cd $PWD/bash/netadmin-tools/ScanNetwork
 $ docker build .
 ```
 
-![](example.gif)
+![](gif/example.gif)
 
 ## Locally
 ```
@@ -21,4 +21,4 @@ $ cd $PWD/bash/netadmin-tools/ScanNetwork
 $ ./scan-network-local.sh
 ```
 
-![](example-local.gif)
+![](gif/example-local.gif)
