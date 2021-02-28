@@ -7,18 +7,18 @@ To have git and nmap installed on your computer if you want run local script.
 
 ## With Docker
 ```
-$ git clone https://github.com/danielitogomez/bash.git
-$ cd $PWD/bash/netadmin-tools/NetworkScan
-$ docker build .
+git clone https://github.com/danielitogomez/bash.git
+cd $PWD/bash/netadmin-tools/NetworkScan
+docker build .
 ```
 
 ![](gif/docker.gif)
 
 ## Locally
 ```
-$ git clone https://github.com/danielitogomez/bash.git
-$ cd $PWD/bash/netadmin-tools/NetworkScan
-$ ./scan-network-local.sh
+git clone https://github.com/danielitogomez/bash.git
+cd $PWD/bash/netadmin-tools/NetworkScan
+./scan-network-local.sh
 ```
 
 ![](gif/locally.gif)
