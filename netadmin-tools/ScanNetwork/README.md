@@ -2,7 +2,7 @@
 A script for ping sweep over several hosts and scan over host that reachable.
 
 ## Requirements
-To have docker and git installed on your computer if you are going to use Docker.
+To have docker and git installed on your computer if you are going to use Docker.<br/>
 To have git and nmap installed on your computer if you want run local script.
 
 ## With Docker
