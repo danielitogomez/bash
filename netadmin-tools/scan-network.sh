@@ -24,12 +24,9 @@ network=$(echo 192.168.{0..1}.128)
 
 #Ping Sweep call funtion loop
 
-
 for host in $network; do
-    pingsweep $host &
+    pingsweep $host
 done
-
-wait
 
 echo "======================"
 echo "Ping Sweep completed."
