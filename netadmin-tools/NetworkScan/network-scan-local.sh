@@ -20,6 +20,7 @@ echo "Starting Ping Sweep..."
 echo "======================"
 
 #Set Network to scan
+
 network=$(echo 192.168.{0..1}.128)
 
 #Ping Sweep call funtion loop
