@@ -1,4 +1,4 @@
-## NetAdmin Tool Scan Network
+## Network Scan NetAdmin tool
 A script for ping sweep over several hosts and scan over host that reachable.
 
 ## Requirements
