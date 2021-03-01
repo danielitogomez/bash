@@ -18,7 +18,7 @@ docker build .
 ```
 git clone https://github.com/danielitogomez/bash.git
 cd $PWD/bash/netadmin-tools/NetworkScan
-./scan-network-local.sh
+./network-scan-local.sh
 ```
 
 ![](gif/locally.gif)
