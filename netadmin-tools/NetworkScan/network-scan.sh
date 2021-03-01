@@ -13,12 +13,12 @@ www.youtube.com
 
 function pingsweep() {
 
-	target=$1
-	host_reachable="/tmp/reachable"
+  target=$1
+  host_reachable="/tmp/reachable"
 
-	if [ ! -f "$host_reachable" ]; then
-    		touch $host_reachable || echo "Failed to create file $host_reachable"
-	fi
+  if [ ! -f "$host_reachable" ]; then
+	touch $host_reachable || echo "Failed to create file $host_reachable"
+  fi
 
 	ping -c1 $target >/dev/null 2>&1 && echo $target is reachable && echo $target is reachable >> $host_reachable || echo $target is down
 
