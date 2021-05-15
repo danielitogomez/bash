@@ -17,7 +17,7 @@ EOF
 
 # Install Docker and kube{let,ctl,adm} version 1.17.8
 
-echo "Installing Docker... and kubernetes..."
+echo "Installing Docker..."
 
 sudo apt-get update -y && sudo apt-get install -y docker-ce=5:19.03.12~3-0~ubuntu-bionic kubelet=1.17.8-00 kubeadm=1.17.8-00 kubectl=1.17.8-00 && sudo apt-mark hold docker-ce kubelet kubeadm kubectl
 

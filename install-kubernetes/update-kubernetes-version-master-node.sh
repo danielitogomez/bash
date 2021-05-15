@@ -1,5 +1,6 @@
 #!/bin/bash
-#Master Node
+
+# Master Node
 
 showHelp()
 {
@@ -26,9 +27,9 @@ while getopts "h:u:" OPTION; do
         esac
 done
 
-#Update kubeadm
-kubeadm version
-sudo apt-mark unhold kubeadm kubelet && sudo apt install -y "kubeadm=$update"
+# Update kubeadm
+
+kubeadm version && sudo apt-mark unhold kubeadm kubelet && sudo apt install -y "kubeadm=$update"
 
 if [ $? -eq 0 ]; then
     echo "=========Go to hold kubeadm============"
@@ -37,7 +38,8 @@ if [ $? -eq 0 ]; then
                 sudo kubeadm upgrade plan
             echo "==============Go to upgrade apply Kubeadm=============="
             
-            #Version Definition
+            # Version Definition
+
             var_version=$(echo $update | awk '{print substr($0, 1, length($0)-3)}')
                         sudo kubeadm upgrade apply v$var_version -y   
                 if [ $? -eq 0 ]; then
@@ -55,7 +57,8 @@ else
     exit 1
 fi
 
-#Update kubectl
+# Update kubectl
+
 sudo apt-mark unhold kubectl && sudo apt install -y "kubectl=$update"
 
 if [ $? -eq 0 ]; then
@@ -72,7 +75,8 @@ else
     exit 1
 fi
 
-#Update kubelet
+# Update kubelet
+
 sudo apt install -y "kubelet=$update"
 
 if [ $? -eq 0 ]; then
@@ -89,7 +93,8 @@ else
     exit 1
 fi
 
-#Check versions
+# Check versions
+
 echo "Kubeadm Version: "
 kubeadm version;
 echo "Kubectl Version: " 

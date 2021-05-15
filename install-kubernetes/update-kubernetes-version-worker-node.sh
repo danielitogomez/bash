@@ -1,5 +1,6 @@
 #!/bin/bash
-#Working Node
+
+# Working Node
 
 showHelp()
 {
@@ -26,6 +27,7 @@ done
 
 sudo apt-mark hold kubectl && sudo apt install -y "kubelet=$update" && sudo apt-mark hold kubelet
 
-#Check Version
+# Check Version
+
 echo "Kubelet Version: "
 kubelet --version
