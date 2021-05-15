@@ -1,16 +1,20 @@
 #!/bin/bash
-#This script must be executed as root
-#bash script for install python3.6
 
-yum update -y
-yum groupinstall -y "development tools"
-yum install -y lsof wget vim-enhanced words which git curl
+# This script must be executed as root
+# bash script for install python3.6
 
-#Customizing Bash
+echo "Installing packages..."
+
+yum update -y && yum groupinstall -y "development tools" && yum install -y lsof wget vim-enhanced words which git curl
+
+### Comment if you want
+# Customizing Bash
 curl https://raw.githubusercontent.com/linuxacademy/content-python3-sysadmin/master/helpers/bashrc -o ~/.bashrc
 
-#Customizing Vim
+# Customizing Vim
 curl https://raw.githubusercontent.com/linuxacademy/content-python3-sysadmin/master/helpers/vimrc -o ~/.vimrc
+
+echo "Installinng dependencies..."
 
 yum install -y \
   libffi-devel \
@@ -26,6 +30,8 @@ yum install -y \
   libpcap-devel \
   xz-devel \
   expat-devel
+
+echo "Installing Python..."
 
 cd /usr/src
 wget http://python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
