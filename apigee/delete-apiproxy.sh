@@ -7,17 +7,27 @@ PASS=""
 ORG=""
 API_Proxies=""
 
+# Set functions
+
 delete_api_proxies () {	
 	for apis in $API_Proxies; do
-                echo "Deleting APIs..."
+                echo "Deleting API Proxies..."
                         apigeetool delete -u $USER -p $PASS -o $ORG -n $apis
                         if [ $? -eq 0 ]; then
-                                echo "APIs were delete"
+                                echo "Api Proxies were delete"
                         else
-                                echo "One or more APIs had a problem with action delete"
+                                echo "One or more api proxies had a problem with action delete"
                                 exit 1
                         fi
         done
+}
+
+install_apigeetool () {
+	npm install -g apigeetool
+}
+
+install_node () {
+	nvm ls && nvm install --lts
 }
 
 echo "Validating dependecies..."
@@ -35,15 +45,15 @@ if [ $? != 2 ]; then
 					echo "Installing nvm..."
 					curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 				else
-					sudo apt-get install curl -y && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+					sudo apt-get install curl -y && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash && install_node
 				fi
 		else
 			echo "Installing latest stable LTS Node..."
-			nvm ls && nvm install --lts
+			install_node
 		fi
 	else
-		echo "Installing apigetool..."
-		npm install -g apigeetool && delete_api_proxies
+		echo "Installing apigetool and delete proxies..."
+		install_apigeetool && delete_api_proxies
 	fi
 else
 	delete_api_proxies
