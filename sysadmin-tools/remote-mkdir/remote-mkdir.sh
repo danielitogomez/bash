@@ -36,14 +36,14 @@ fi
 }
 
 function_remote_server () {
-echo "Connecting to remote server...";
-	if [ "$(ssh -i $SSH_PUB_KEY $USER@$SERVER "$CMD"; echo $?)" = "0" ]; then
-		echo "Connecting success..."
-		exit_status
-	else
-		echo "Unsucess conection..."
-		exit 1
-	fi
+	echo "Connecting to remote server...";
+if [ "$(ssh -i $SSH_PUB_KEY $USER@$SERVER "$CMD"; echo $?)" = "0" ]; then
+	echo "Connecting success..."
+	exit_status
+else
+	echo "Unsucess conection..."
+	exit 1
+fi
 }
 
 # Functions call
