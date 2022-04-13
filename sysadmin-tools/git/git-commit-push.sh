@@ -1,5 +1,10 @@
 #!/bin/bash
 
+## --------------------------------------------------------------------------
+## - [GitAutomation] : Script to automate git with standards.
+## - [DevOps] : Dani Gómez (@danielitogomez)
+## --------------------------------------------------------------------------
+
 # Functions
 
 add_function () {
