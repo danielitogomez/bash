@@ -1,0 +1,8 @@
+Changelog
+*.sql
+*.dump
+test_versions.sh
+sql_test.sh
+README.md
+sakila
+images
