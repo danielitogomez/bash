@@ -16,14 +16,14 @@ if [ ! -d "$HOME/$MY_TRIGGER" ]; then
     rm -rf $OBJ_WHITE_RABBIT
     break
 else
-    echo "Still exiting $MY_TRIGGER"
+    echo "Still existing $MY_TRIGGER"
 fi
 }
 
 # Function loop delete trigger if eq set time
 
 function loop_delete_my_trigger () {
-while [ "$(date '+%Y/%m/%d %H:%M:%S' | awk '{print $2}')" == 22:59:15 ]; do 
+while [ "$(date '+%Y/%m/%d %H:%M:%S' | awk '{print $2}')" == 00:49:15 ]; do 
   echo "Deleting $MY_TRIGGER"
   rm -rf $MY_TRIGGER
   break
