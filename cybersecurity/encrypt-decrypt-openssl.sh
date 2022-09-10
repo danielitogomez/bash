@@ -1,9 +1,10 @@
 #!/bin/bash
 
-## ------------------------------------------------------------------------------------
+## --------------------------------------------------------------------------------------------
 ## - [encrypt/decrypt automation] : Script to automate encrypt and decrypt with openssl.
 ## - [DevOps] : Dani Gómez (@danielitogomez)
-## ------------------------------------------------------------------------------------
+## - [CHANGELOG] : version 1.0.0 Initial script. WIP controller of the openssl installed package
+## --------------------------------------------------------------------------------------------
 
 # Variables
 INPUT_FILE="$PWD/testing.txt"
