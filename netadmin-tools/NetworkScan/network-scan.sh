@@ -4,9 +4,7 @@
 
 list="
 www.lala.com
-www.github.com
-www.stackoverflow.com
-www.youtube.com    
+www.danielitogomez.github.io
 "
 
 #Ping sweep Function
@@ -52,7 +50,7 @@ echo "========================"
 #Nmap Scan loop
 
 for scan in $host_reachable; do
-    nmap $scan
+    nmap --script vuln --script banner $scan
 done
 
 rm -f /tmp/reachable
