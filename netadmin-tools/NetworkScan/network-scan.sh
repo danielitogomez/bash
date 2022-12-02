@@ -50,7 +50,11 @@ echo "========================"
 #Nmap Scan loop
 
 for scan in $host_reachable; do
-    nmap --script vuln --script banner $scan
+
+####nmap --script vuln --script banner $scan
+
+    nmap -sV --script=banner $scan
+
 done
 
 rm -f /tmp/reachable
