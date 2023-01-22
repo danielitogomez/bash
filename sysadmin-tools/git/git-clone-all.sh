@@ -5,10 +5,10 @@
 ## - [DevOps] : Dani Gómez (@danielitogomez)
 ## --------------------------------------------------------------------------
 
-# variables
+# Variables
 USER=""
 TOKEN=""
-# api endpoint
+# API endpoint
 ORG_URL="https://api.github.com/users/$USER/repos?per_page=100"
 
 # function to clone all
@@ -21,5 +21,5 @@ clone_all() {
     done
 }
 
-# call function
+# Call function
 clone_all
