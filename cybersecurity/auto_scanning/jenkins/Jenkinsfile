@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Run Scan') {
+
+           options {
+                timeout(time: 10, unit: 'MINUTES')
+            }
+
+            steps {
+                git 'https://github.com/danielitogomez/automation-scanning'
+                sh 'chmod +x run.sh && ./run.sh'
+            }    
+        }
+    }
+            post {
+                success {
+                    sh 'echo "### Scanning finish success ###"'
+                }
+            }
+}
